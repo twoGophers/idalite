@@ -1,28 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="wrapper">
+      <Cart></Cart>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cart from "./components/cart/Cart.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Cart
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "./assets/style/Imports.scss";
+::-webkit-scrollbar {
+  width: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+background: #fcfbfa 80%;
+display: flex;
+  .wrapper {
+    //outline: 1px solid black;
+    width: 87%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #app {
+    .wrapper {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  #app {
+    .wrapper {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0%;
+    }
+  }
 }
 </style>

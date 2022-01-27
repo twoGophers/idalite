@@ -22,3 +22,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+Не работает толком валидация, при первой отправки карточки, выдает ошибки, что поля пустые.
+
+Нет регулярных выражений на форме
+
+Запускался на Node 16
